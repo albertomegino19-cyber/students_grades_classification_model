@@ -1,46 +1,58 @@
-# Student Performance Prediction
+Student Performance Prediction
+Overview
 
-## Overview
+This project builds a machine learning pipeline to predict whether a student will pass or fail based on academic, behavioral, and lifestyle data. The goal is not only to make accurate predictions, but also to understand which factors drive student performance and could help guide early interventions.
 
-This project develops a machine learning pipeline to predict student performance (Pass/Fail) using academic, behavioral, and lifestyle features. The objective is to identify key factors influencing outcomes and support early intervention strategies.
+Methodology
 
-## Methodology
+The workflow follows a standard data science process: data cleaning, preprocessing, and exploratory analysis to understand patterns and relationships in the data.
 
-The workflow follows a structured approach, including data cleaning, preprocessing, and exploratory data analysis to understand feature relationships. Feature engineering techniques such as encoding and imputation are applied before training models. Two gradient boosting algorithms are used and optimized through hyperparameter tuning, with performance evaluated using metrics such as accuracy, F1-score, and ROC-AUC.
+Missing values were handled and categorical variables encoded before training the models. Feature engineering was applied where relevant.
 
-## Models
+Two gradient boosting models were trained and tuned using cross-validation. Performance was evaluated using accuracy, F1-score, and ROC-AUC to ensure a balanced assessment.
 
-The project compares two models:
+Models
 
-* XGBoost
-* LightGBM
+The project compares two tree-based ensemble models:
 
-Both are well-suited for structured data and provide strong predictive performance.
+XGBoost
 
-## Results
+LightGBM
 
-Both models achieved reliable results. XGBoost offered more stable and interpretable outcomes after tuning, while LightGBM provided faster training with competitive accuracy.
+Both are well-suited for tabular data and handle non-linear relationships effectively.
 
-## Key Insights
+Results
 
-The analysis shows that student performance is strongly influenced by study consistency and behavioral patterns. Lifestyle factors, including sleep and screen time, also contribute significantly to predictions.
+Both models performed well overall.
 
-## Technical Stack
+XGBoost delivered slightly more stable results after tuning and was easier to interpret, while LightGBM trained faster and achieved similar performance levels.
 
-The implementation uses Python with standard data science libraries, including Pandas, NumPy, Scikit-learn, XGBoost, LightGBM, Matplotlib, and Seaborn.
+Key Insights
 
-## How to Run
+The results suggest that consistency in study habits and behavioral patterns are strong predictors of student performance.
 
-Clone the repository, install the dependencies listed in `requirements.txt`, and run the Jupyter notebook to reproduce the results.
+Lifestyle factors such as sleep and screen time also play a relevant role. A feature importance analysis was used to identify which variables contributed most to the model’s predictions.
 
-## Project Structure
+Technical Stack
 
-The repository includes the main notebook, the requirements file, and optional folders for datasets and visual outputs.
+Python was used for the full pipeline, including:
 
-## Limitations and Future Work
+Pandas and NumPy for data manipulation
 
-The dataset does not capture external influences such as socio-economic factors, which may affect performance. Future work may include incorporating additional features, applying explainability techniques, and deploying the model for practical use.
+Scikit-learn for preprocessing and evaluation
 
-## Conclusion
+XGBoost and LightGBM for modeling
 
-This project demonstrates the effectiveness of machine learning in predicting student outcomes and highlights its potential as a tool for supporting data-driven decision-making in education.
+Matplotlib and Seaborn for visualization
+
+How to Run
+
+Clone the repository, install the dependencies listed in requirements.txt, and run the Jupyter notebook to reproduce the analysis and results.
+
+Project Structure
+
+The repository contains the main notebook, a requirements file, and optional folders for datasets and generated visualizations.
+
+Conclusion
+
+This project shows how machine learning can be used not only to predict outcomes, but also to better understand the factors behind student performance, with potential applications in education and early intervention strategies.onstrates the effectiveness of machine learning in predicting student outcomes and highlights its potential as a tool for supporting data-driven decision-making in education.
